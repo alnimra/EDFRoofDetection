@@ -1,0 +1,28 @@
+<!-- <html>
+<title>EDF Hackthon</title>
+<div id="map" style="width:100%;height:400px;"></div>
+<script src="libraries/html2canvas.min.js"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvGILm7znn6jyqK3hn9k90Bm7hfuqkrv4">
+    </script>
+<script src="map.js"></script>
+</html> -->
+
+<html>
+
+<body style="margin:0px;">
+
+    <canvas id="imgData"></canvas>
+    <input type="file" id="files" name="files[]" multiple />
+    <div style="position:absolute; top:0px; left: 0px;" id="svgcontainer"></div>
+    <div style="position:fixed; top:0px; right: 0px;" id="processedData"></div>
+    <div style="position:fixed; bottom:0px; left:0px">
+        Toggle Layers
+        <button>Satellite Layer</button>
+        <button>Building Layer</button>
+    </div>
+    <script src="libraries/imagetracer_v1.2.3.js"></script>
+    <script src="imageProcessing.js"></script>
+</body>
+
+</html>
