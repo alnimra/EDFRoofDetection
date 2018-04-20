@@ -10,16 +10,16 @@
 
 <html>
 
-<body style="margin:0px;">
+<body style="margin:0px; background-image:url('aquila.png'); background-position: center; background-size: cover">
 
     <canvas id="imgData"></canvas>
     <input type="file" id="files" name="files[]" multiple />
     <div style="position:absolute; top:0px; left: 0px;" id="svgcontainer"></div>
-    <div style="position:fixed; top:0px; right: 0px;" id="processedData"></div>
+    <div style="background-color: rgba(255, 255, 255, 0.5);font-size: 36px;color:black;position:fixed; top:0px; right: 0px;" id="processedData"></div>
     <div style="position:fixed; bottom:0px; left:0px">
         Toggle Layers
-        <button>Satellite Layer</button>
-        <button>Building Layer</button>
+        <button id="satLayerBtn">Satellite Layer</button>
+        <button id="buildingLayerBtn">Building Layer</button>
     </div>
     <script src="libraries/imagetracer_v1.2.3.js"></script>
     <script src="imageProcessing.js"></script>

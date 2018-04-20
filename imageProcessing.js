@@ -331,11 +331,13 @@ function goThroughAllPathsAndReplaceWithExactPolygon() {
 }
 function removeNoise() {
 	let numRemoved = 1;
+	console.log("Removing Noise...");
+	console.log(200 * ((canvas.width * canvas.height) / (2452 * 2858)));
 	while (numRemoved > 0) {
 		numRemoved = 0;
 		let polys = document.getElementsByTagName("polygon");
 		for (let i = 0; i < polys.length; i++) {
-			if (Number.parseInt(polys[i].getAttribute("area")) < 200) {
+			if (Number.parseInt(polys[i].getAttribute("area")) < (200 * ((canvas.width * canvas.height) / (2452 * 2858)))) {
 				numRemoved++;
 				polys[i].parentNode.removeChild(polys[i]);
 			}
@@ -396,6 +398,12 @@ function makeContrast(val) {
 	// img.data = convertImageDataToRGB(img.data);
 	ctx.putImageData(img, 0, 0);
 }
+
+function printData(){
+	document.getElementById("processedData").innerHTML = document.getElementsByTagName("polygon").length + " buildings in this area <br> = " + document.getElementsByTagName("polygon").length * 5 * 16 + "gJ of energy per year";
+	document.getElementsByTagName("polygon").length;
+	
+}
 //3: ACTIONABLE THREAD
 
 function handleFileSelect(evt) {
@@ -432,6 +440,7 @@ function handleFileSelect(evt) {
 					setImgOnCanvas(orgImg);
 					goThroughAllPathsAndReplaceWithExactPolygon();
 					removeNoise();
+					printData();
 				}, false);
 				// extrapolTileData();
 			};
