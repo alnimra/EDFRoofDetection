@@ -24,6 +24,20 @@ For example:
 7. Finally after uploading the contrasted image, and waiting a few moments, you should get an analysis of the roof tops as:
 ![image4](https://raw.githubusercontent.com/alnimra/EDFRoofDetection/master/readmeimgs/result.png)
 
+# The Algorithm
+The main assumption of this algorithm is that roof tops are higher in elevation thus giving them a more uniform color. For this specific app, the uniform color that was assumed was white, as sunlight causes the roofs to appear so. First, we filter all the colors out to be left with only these uniform patches. Patches of a certain size are considered to be roof tops.
+1. First the satellite image is contrasted with the OSX Preview Contrast Filter set to the max setting.
+2. Then the image is processed automatically in the app by: 
+      <br>
+      a) Inverting colors, to get a more freindly color selection of the hues (this step is not necessary, but was done for getting a better intuition of the algorithm. Also, if this step is not applied, the rest of the algorithm will not work.
+      <br>
+      b) Removing dark hues that are considered as noise to allow for easier detection of the roofs.
+      <br>
+      c) Then the entire image is converted into SVG format so the area of each color block can be calculated.
+      <br>
+      d) The image of each svg path is calculated, and any image with an area larger than a certain ratio size, will be removed selected as noise.
+      <br>
+      e) Finally the number of larger blocks will be counted and reported, assumed to be buildings (within some error, depending on the number of bright spots in the image orginally.
 
 If you have any questions, contact: raymilant@gmail.com.
 (-m-ゞ
