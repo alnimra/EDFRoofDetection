@@ -23,3 +23,7 @@ For example:
 ![image4](https://raw.githubusercontent.com/alnimra/EDFRoofDetection/master/readmeimgs/contrasted.png)
 7. Finally after uploading the contrasted image, and waiting a few moments, you should get an analysis of the roof tops as:
 ![image4](https://raw.githubusercontent.com/alnimra/EDFRoofDetection/master/readmeimgs/result.png)
+
+
+If you have any questions, contact: raymilant@gmail.com.
+(-m-ゞ
