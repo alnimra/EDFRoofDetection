@@ -11,4 +11,5 @@ To run the program,
    <br>**Make sure to have nodejs installed on the computer before node will work. This is important as inorder to bypass the 
    cross origin error, the app must be started with node.
 3. Finally after running `node server.js`, go to your `localhost:5000` or `SERVERIP:5000`.
-You should see a page like;
+You should see a page like: 
+! [alt text](https://raw.githubusercontent.com/alnimra/EDFRoofDetection/master/readmeimgs/Img1.png)
