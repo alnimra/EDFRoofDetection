@@ -3,24 +3,66 @@
 <div id="map" style="width:100%;height:400px;"></div>
 <script src="libraries/html2canvas.min.js"></script>
 <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvGILm7znn6jyqK3hn9k90Bm7hfuqkrv4">
-    </script>
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvGILm7znn6jyqK3hn9k90Bm7hfuqkrv4">
+</script>
 <script src="map.js"></script>
 </html> -->
 
 <html>
+<meta>
+
+<title>Aquila</title>
+</meta>
 
 <body style="margin:0px; background-image:url('aquila.png'); background-position: center; background-size: cover">
+    <style>
+        .btn {
+            -webkit-border-radius: 44;
+            -moz-border-radius: 44;
+            border-radius: 44px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 16px;
+            background: #232B46;
+            padding: 10px 40px 10px 40px;
+            margin-right: 20px;
+            text-decoration: none;
+            max-width: 120px;
+            text-align: center;
+        }
+
+        .wrap {
+            display: flex;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .btn:hover {
+            background: #EF5A4A;
+            text-decoration: none;
+        }
+
+        .footer {
+            text-align: center;
+            width: 100%;
+            opacity: 0.3;
+        }
+    </style>
 
     <canvas id="imgData"></canvas>
     <input type="file" id="files" name="files[]" multiple />
     <div style="position:absolute; top:0px; left: 0px;" id="svgcontainer"></div>
-    <div style="background-color: rgba(255, 255, 255, 0.5);font-size: 36px;color:black;position:fixed; top:0px; right: 0px;" id="processedData"></div>
-    <div style="position:fixed; bottom:0px; left:0px">
-        Toggle Layers
-        <button id="satLayerBtn">Satellite Layer</button>
-        <button id="buildingLayerBtn">Building Layer</button>
+    <div style="background-color: rgba(255, 255, 255, 0.5);font-size: 36px;color:black;position:fixed;top:60%;right: 0px;margin-right: 100px;padding: 40px;font-width:;border-radius: 10px;"
+        id="processedData"></div>
+    <div style="position:fixed;top:0px;left:0px;min-height: 10px;background-color: rgba(255, 255, 255, 0.472);width: 100%;padding: 20px;display: flex;">
+        <div class="wrap">
+            <div id="satLayerBtn"class="btn"> Satellite</div>
+            <div id="buildingLayerBtn"class="btn"> Building</div>
+        </div>
     </div>
+    <!-- <div style="position:fixed;bottom:0px;left:0px;min-height: 10px;background-color: white;width: 100%;padding: 20px;display: flex;">
+        <p class="footer" style="text-align: center; width: 100%; opacity: 0.3;">Copyright Aquila 2018</p>
+    </div> -->
     <script src="libraries/imagetracer_v1.2.3.js"></script>
     <script src="imageProcessing.js"></script>
 </body>
